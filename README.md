@@ -11,3 +11,9 @@ To quote the [PHP documentation](https://www.php.net/manual/en/language.generato
 >A simple example of this is to reimplement the range() function as a generator. The standard range() function has to generate an array with every value in it and return it, which can result in large arrays: for example, calling range(0, 1000000) will result in well over 100 MB of memory being used.
 >
 >As an alternative, we can implement an xrange() generator, which will only ever need enough memory to create an Iterator object and track the current state of the generator internally, which turns out to be less than 1 kilobyte.
+
+## Yield keyword
+
+### Range reimplement
+
+An example to create a range with less memory used.
