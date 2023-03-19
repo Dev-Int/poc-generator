@@ -17,3 +17,7 @@ To quote the [PHP documentation](https://www.php.net/manual/en/language.generato
 ### Range reimplement
 
 An example to create a range with less memory used.
+
+The advantage of `yield` return is that the function is run only when the iteration is called in the `foreach`, for example.
+
+### Fibonacci suite
