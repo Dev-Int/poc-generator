@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Command\GenerateRange;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -53,8 +53,7 @@ final class GenerateRangeCommand extends Command
             $event = $stopwatch->stop('range');
 
             $io->success(
-                sprintf('The range is generated with success. %s', $event->__toString()
-                )
+                sprintf('The range is generated with success. %s', $event->__toString())
             );
         } catch (\Exception $exception) {
             $io->error($exception->getMessage());

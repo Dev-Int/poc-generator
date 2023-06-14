@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Command\GenerateRange;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;

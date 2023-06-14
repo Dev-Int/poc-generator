@@ -21,3 +21,10 @@ An example to create a range with less memory used.
 The advantage of `yield` return is that the function is run only when the iteration is called in the `foreach`, for example.
 
 ### Fibonacci suite
+
+Add a funny example :wink:.
+
+### Command with full information
+
+The goal is to have commands that return a maximum of information during their execution.  
+The advantage of the `yield` keyword is that the code function is run in the command, not when the function is called.

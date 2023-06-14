@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customers List{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>List of customers</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>email</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if customers is not empty %}
+                {% for customer in customers %}
+                    <tr>
+                        <td>{{ customer.firstName }}</td>
+                        <td>{{ customer.lastName }}</td>
+                        <td>{{ customer.email }}</td>
+                        <td>
+                            <ul>
+                                {% for address in customer.addresses %}
+                                    <li>{{ address.name }} - {{ address.fullAddress }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4">No customer yet!</td>
+                </tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
